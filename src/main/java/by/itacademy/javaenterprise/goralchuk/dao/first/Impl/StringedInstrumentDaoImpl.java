@@ -1,4 +1,4 @@
-package by.itacademy.javaenterprise.goralchuk.dao.first.Impl;
+package by.itacademy.javaenterprise.goralchuk.dao.first.impl;
 
 import by.itacademy.javaenterprise.goralchuk.dao.first.StringedInstrumentDao;
 import by.itacademy.javaenterprise.goralchuk.entity.first.StringedInstrument;

@@ -1,6 +1,6 @@
-package by.itacademy.javaenterprise.goralchuk.dao.first.impl;
+package by.itacademy.javaenterprise.goralchuk.dao.second.impl;
 
-import by.itacademy.javaenterprise.goralchuk.entity.first.StringedInstrument;
+import by.itacademy.javaenterprise.goralchuk.entity.second.ElectricInstrument;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -17,12 +17,12 @@ import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class StringedInstrumentDaoImplTest {
-    private static final Logger logger = LoggerFactory.getLogger(StringedInstrumentDaoImplTest.class);
+public class ElectricInstrumentDaoImplTest {
+    private static final Logger logger = LoggerFactory.getLogger(ElectricInstrumentDaoImplTest.class);
 
     private EntityManager entityManagerManager;
     private EntityTransaction entityTransactionTransaction;
-    private StringedInstrumentDaoImpl instrumentDao;
+    private ElectricInstrumentDaoImpl instrumentDao;
 
     @Rule
     public TestWatcher watchman = new TestWatcher() {
@@ -41,16 +41,16 @@ public class StringedInstrumentDaoImplTest {
     public void setUp() {
         entityManagerManager = mock(EntityManager.class);
         entityTransactionTransaction = mock(EntityTransaction.class);
-        instrumentDao = new StringedInstrumentDaoImpl(entityManagerManager);
+        instrumentDao = new ElectricInstrumentDaoImpl(entityManagerManager);
     }
 
     @Test
     public void whenFindInstrumentById() {
         Long expectedId = 10L;
-        StringedInstrument instrument = new StringedInstrument();
+        ElectricInstrument instrument = new ElectricInstrument();
         instrument.setId(expectedId);
 
-        when(entityManagerManager.find(StringedInstrument.class, expectedId)).thenReturn(instrument);
+        when(entityManagerManager.find(ElectricInstrument.class, expectedId)).thenReturn(instrument);
 
         logger.info("FirstObject  {}", instrument);
         logger.info("SecondObject  {}", instrumentDao.find(expectedId));
@@ -61,7 +61,7 @@ public class StringedInstrumentDaoImplTest {
     @Test
     public void whenSaveInstrumentToDatabase() {
         Long expectedId = 10L;
-        StringedInstrument instrument = new StringedInstrument();
+        ElectricInstrument instrument = new ElectricInstrument();
         instrument.setId(expectedId);
 
         when(entityManagerManager.getTransaction()).thenReturn(entityTransactionTransaction);

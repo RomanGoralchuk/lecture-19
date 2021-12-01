@@ -1,24 +1,25 @@
-package by.itacademy.javaenterprise.goralchuk.dao.first.impl;
+package by.itacademy.javaenterprise.goralchuk.dao.second.impl;
 
-import by.itacademy.javaenterprise.goralchuk.dao.first.WindInstrumentDao;
-import by.itacademy.javaenterprise.goralchuk.entity.first.WindInstrument;
+import by.itacademy.javaenterprise.goralchuk.dao.second.MuscleInstrumentDao;
+import by.itacademy.javaenterprise.goralchuk.entity.second.MuscleInstrument;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 
-public class WindInstrumentDaoImpl implements WindInstrumentDao {
-    private static final Logger logger = LoggerFactory.getLogger(WindInstrumentDaoImpl.class);
+public class MuscleInstrumentDaoImpl implements MuscleInstrumentDao {
+    private static final Logger logger = LoggerFactory.getLogger(MuscleInstrumentDaoImpl.class);
 
     private EntityManager entityManager;
 
-    public WindInstrumentDaoImpl(EntityManager em) {
+    public MuscleInstrumentDaoImpl(EntityManager em) {
         this.entityManager = em;
     }
+
     @Override
-    public WindInstrument find(Long id) {
-        WindInstrument instrument = entityManager.find(WindInstrument.class, id);
+    public MuscleInstrument find(Long id) {
+        MuscleInstrument instrument = entityManager.find(MuscleInstrument.class, id);
         if (instrument == null) {
             logger.debug("Object not found");
             return null;
@@ -29,7 +30,7 @@ public class WindInstrumentDaoImpl implements WindInstrumentDao {
     }
 
     @Override
-    public WindInstrument save(WindInstrument instrument) {
+    public MuscleInstrument save(MuscleInstrument instrument) {
         try {
             entityManager.getTransaction().begin();
             entityManager.persist(instrument);
@@ -44,7 +45,7 @@ public class WindInstrumentDaoImpl implements WindInstrumentDao {
     }
 
     @Override
-    public WindInstrument update(WindInstrument windInstrument) {
+    public MuscleInstrument update(MuscleInstrument muscleInstrument) {
         return null;
     }
 
@@ -54,7 +55,7 @@ public class WindInstrumentDaoImpl implements WindInstrumentDao {
     }
 
     @Override
-    public List<WindInstrument> findAll() {
+    public List<MuscleInstrument> findAll() {
         return null;
     }
 }

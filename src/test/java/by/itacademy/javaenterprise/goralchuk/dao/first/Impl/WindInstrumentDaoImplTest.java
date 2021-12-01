@@ -1,6 +1,5 @@
-package by.itacademy.javaenterprise.goralchuk.dao.first.Impl;
+package by.itacademy.javaenterprise.goralchuk.dao.first.impl;
 
-import by.itacademy.javaenterprise.goralchuk.entity.first.StringedInstrument;
 import by.itacademy.javaenterprise.goralchuk.entity.first.WindInstrument;
 import org.junit.Before;
 import org.junit.Rule;
