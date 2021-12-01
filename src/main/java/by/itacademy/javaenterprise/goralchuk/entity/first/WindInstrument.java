@@ -10,12 +10,5 @@ import javax.persistence.*;
 @Entity
 @Table
 public class WindInstrument extends MusicalInstrument {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
     private String material;
-
-    public WindInstrument(Long id) {
-        this.id = id;
-    }
 }

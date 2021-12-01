@@ -47,7 +47,8 @@ public class WindInstrumentDaoImplTest {
     @Test
     public void whenFindInstrumentById() {
         Long expectedId = 10L;
-        WindInstrument instrument = new WindInstrument(expectedId);
+        WindInstrument instrument = new WindInstrument();
+        instrument.setId(expectedId);
 
         when(entityManagerManager.find(WindInstrument.class, expectedId)).thenReturn(instrument);
 
@@ -60,7 +61,8 @@ public class WindInstrumentDaoImplTest {
     @Test
     public void whenSaveInstrumentToDatabase() {
         Long expectedId = 10L;
-        WindInstrument instrument = new WindInstrument(expectedId);
+        WindInstrument instrument = new WindInstrument();
+        instrument.setId(expectedId);
 
         when(entityManagerManager.getTransaction()).thenReturn(entityTransactionTransaction);
 

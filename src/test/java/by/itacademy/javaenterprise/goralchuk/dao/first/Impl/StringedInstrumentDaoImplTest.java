@@ -47,7 +47,8 @@ public class StringedInstrumentDaoImplTest {
     @Test
     public void whenFindInstrumentById() {
         Long expectedId = 10L;
-        StringedInstrument instrument = new StringedInstrument(expectedId);
+        StringedInstrument instrument = new StringedInstrument();
+        instrument.setId(expectedId);
 
         when(entityManagerManager.find(StringedInstrument.class, expectedId)).thenReturn(instrument);
 
@@ -60,7 +61,8 @@ public class StringedInstrumentDaoImplTest {
     @Test
     public void whenSaveInstrumentToDatabase() {
         Long expectedId = 10L;
-        StringedInstrument instrument = new StringedInstrument(expectedId);
+        StringedInstrument instrument = new StringedInstrument();
+        instrument.setId(expectedId);
 
         when(entityManagerManager.getTransaction()).thenReturn(entityTransactionTransaction);
 
