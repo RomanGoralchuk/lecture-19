@@ -1,4 +1,4 @@
-package by.itacademy.javaenterprise.goralchuk.naming;
+package by.itacademy.javaenterprise.goralchuk.util;
 
 import org.hibernate.boot.model.naming.Identifier;
 import org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl;

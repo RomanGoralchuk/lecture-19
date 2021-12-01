@@ -1,0 +1,7 @@
+CREATE TABLE wind_instrument (
+	id BIGINT NOT NULL,
+	classification CHAR(50) NULL DEFAULT NULL,
+	name CHAR(50) NULL DEFAULT NULL,
+	material INT NULL DEFAULT NULL,
+	PRIMARY KEY (id) USING BTREE
+);

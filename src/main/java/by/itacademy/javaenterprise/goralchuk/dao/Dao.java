@@ -1,5 +1,7 @@
 package by.itacademy.javaenterprise.goralchuk.dao;
 
+import by.itacademy.javaenterprise.goralchuk.entity.first.WindInstrument;
+
 import java.util.List;
 
 public interface Dao<T> {

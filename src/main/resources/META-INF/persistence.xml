@@ -22,7 +22,7 @@
             <property name="javax.persistence.jdbc.password"
                       value="userpass" />
             <property name="hibernate.physical_naming_strategy"
-                      value="by.itacademy.javaenterprise.goralchuk.naming.TableNamingStrategy" />
+                      value="by.itacademy.javaenterprise.goralchuk.util.TableNamingStrategy" />
         </properties>
     </persistence-unit>
 </persistence>
