@@ -1,0 +1,8 @@
+CREATE TABLE stringed_instrument (
+	id BIGINT(20) NOT NULL AUTO_INCREMENT,
+	classification CHAR(50) NULL DEFAULT NULL,
+	category CHAR(50) NULL DEFAULT NULL,
+	name CHAR(50) NULL DEFAULT NULL,
+	number_of_strings INT NULL DEFAULT NULL,
+	PRIMARY KEY (id) USING BTREE
+);

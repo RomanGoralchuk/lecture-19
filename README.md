@@ -23,4 +23,4 @@ Hibernate. Data storage methods and data matching
 ### How to run
 * `mvn clean package`
 * `docker-compose up -d`
-*  run Main class
+* `java -jar target\lecture-19-1.0-SNAPSHOT.jar`
